@@ -11,6 +11,7 @@ I'm indebted to Russell Nathan Hyer, maintainer of GNU PDF,
 for his patience and great assistance.
 
 web-page and online squasher: <http://agordon.github.io/pdf-squasher>
+
 source: <https://github.com/agordon/pdf-squasher/>
 
 
