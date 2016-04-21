@@ -23,7 +23,7 @@ The following are required:
 
 On Debian/Ubuntu:
 
-    apt-get install -y qpdf mupdf
+    apt-get install -y qpdf mupdf mupdf-tools
 
 On Mac OS X:
 
