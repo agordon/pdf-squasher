@@ -1,2 +1,116 @@
-<html>
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>PDF Squasher</title>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+
+    <!-- link href="custom.css" rel="stylesheet" /-->
+
+    <style type="text/css" media="screen">
+    </style>
+
+  </head>
+  <body>
+
+	<header class="jumbotron subhead" id="overview">
+		<div class="container">
+			<h1>PDF Squasher<h1>
+			<!-- p class="lead">Reduce PDF plot size</p -->
+		</div>
+	</header>
+
+	<div class="container">
+
+		<!-- Introduction -->
+
+		<div class="row">
+			<div class="span6">
+				<h3>What is PDF-Squasher?</h3>
+        <p>
+        PDF-Squasher can reduce certain types of PDF plots
+        by squashing repetitive rectangles into one.
+        <br/>
+        <br/>
+        <b>Example:</b>
+        Compare
+        <a href="color-rectangles.pdf">original</a> and
+        <a href="color-rectangles-squashed.pdf">squashed</a> PDF plots:
+        both should appear the same (or very similar), but try to edit them
+        in Adobe Illustrator or Inkscape and you'll notice the difference.
+        </p>
+			</div>
+			<div class="span6">
+				<h3>More information</h3>
+				<ul>
+					<li>PDF-Squasher is free software (GPLv3)</li>
+          <li>written by
+               <a href="https://github.com/agordon/">Assaf</a>
+               <a href="http://crashcourse.housegordon.org">Gordon</a>.
+          </li>
+          <li>Runs on GNU/Linux, Mac-OS X
+              <br/>(not tested, but likely elsewhere as well)</li>
+					<li>for <b>source-code</b>, <b>installation instructions</b>
+              and more technical details, see:
+              <a href="https://github.com/agordon/pdf-squasher/">
+              https://github.com/agordon/pdf-squasher</a>.
+          </li>
+          <li>
+          If you can't (or prefer not to) run PDF-Squasher on your computer,
+          use the online version below.
+          </li>
+          <li>
+            I'm indebted to <b>Russell Nathan Hyer</b>, maintainer of
+            <a href="http://www.gnu.org/software/pdf/">GNU PDF</a>,
+            for his patience and great assistance.
+          </li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="span12">
+				<h3>Online PDF Squasher</h3>
+
+        Select a PDF file (from your computer) and click <b>squash</b>
+        to run PDF-Squasher (the squashed file will be returned).
+        <br/>
+        <br/>
+        <form action="" method="post" enctype="multipart/form-data">
+         PDF file to squash:
+         <input type="file" name="pdffile" accept="*.pdf" />
+         <br/>
+         <input type="submit" name="squash" value="squash"/>
+        </form>
+
+        <p>
+        <h3>Remember</h3>
+        <ul>
+         <li>
+          PDF-Squasher is comes WITHOUT ANY WARRANTY; without even the implied warranty of
+          MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+         </li>
+         <li>
+          It is your responsibility to ensure the resulting squashed PDF
+          is valid, and conveys the same information as the original PDF.
+         </li>
+         <li>
+          PDF-Squasher is effective only on certain types of plots, not all
+          pdf files will benefit from being squashed.
+         </li>
+         <li>
+          Online PDF-Squasher runs on a weak server and can only handle PDF
+          of limited size. Run PDF-Squasher locally for faster results.
+         </li>
+        </p>
+
+			</div>
+		</div>
+
+	</div><!--container -->
+		<br/>
+		<br/>
+		<br/>
+  </body>
 </html>
