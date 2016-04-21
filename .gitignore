@@ -1,0 +1,8 @@
+*~
+*.swp
+*.pdf
+*.png
+*.ps
+
+# demo files
+color-rectangles/*
