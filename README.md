@@ -7,6 +7,9 @@ Low-Level PDF manipulation tool to squash repetitive rectangles into one
 Copyright (C) 2016 Assaf Gordon (assafgordon@gmail.com)
 License: GPLv3 or later
 
+I'm indebted to Russell Nathan Hyer, maintainer of GNU PDF,
+for his patience and great assistance.
+
 
 Installation
 ============
@@ -81,3 +84,11 @@ FAQ
     but it is always your responsibility to examine the output and compare
     it to the original file.
 
+4.  PDF Recommendations?
+
+    Generate PDF directly in R (using the `pdf` output device).
+    If using Postscript output (`.ps` files), convert to PDF using the
+    `ps2pdf` command line program. *DO NOT* use Mac-OS-X built-in
+    preview program or its 'Export to PDF' method - as the exported PDF
+    will contain many superfluous drawing commands which will prevent
+    squashing.
