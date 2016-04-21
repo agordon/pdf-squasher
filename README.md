@@ -10,6 +10,9 @@ License: GPLv3 or later
 I'm indebted to Russell Nathan Hyer, maintainer of GNU PDF,
 for his patience and great assistance.
 
+web-page and online squasher: <http://agordon.github.io/pdf-squasher>
+source: <https://github.com/agordon/pdf-squasher/>
+
 
 Installation
 ============
@@ -37,7 +40,10 @@ copy it to a location in your path (e.g. `/usr/local/bin`).
 Example
 =======
 
-Run `./demo.sh` to generate a PDF plot file then squash it to a smaller file.
+Online: <http://agordon.github.io/pdf-squasher>
+
+Run locally: Run `./demo.sh` to generate a PDF plot file and squash it.
+
 
 
 
