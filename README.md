@@ -46,6 +46,45 @@ Online: <http://agordon.github.io/pdf-squasher>
 Run locally: Run `./demo.sh` to generate a PDF plot file and squash it.
 
 
+Usage
+=====
+
+    $ ./pdf-squasher.py --help
+    usage: pdf-squasher.py [-h] [-v] [--verbose] [--distance-epsilon E]
+                           [--output FILE] [--outdir DIR]
+                           FILE
+
+    PDF Squasher - version 0.2
+    Copyright (C) 2016 Assaf Gordon <assafgordon@gmail.com>
+    License: GPLv3-or-later
+
+    positional arguments:
+      FILE                  PDF file to process
+
+    optional arguments:
+      -h, --help            show this help message and exit
+      -v, --version         show program's version number and exit
+      --verbose             be verbose
+      --distance-epsilon E  distance epsilon: rectangles closer than this value
+                            (in PDF coordinates) will be merged. Larger values
+                            might produce small PDF files (default: 0.005000).
+      --output FILE, -o FILE
+                            output PDF file
+      --outdir DIR          write intermediate output files to this directory,and
+                            don't delete it after completion
+
+    Example:
+
+    read 'input.pdf', try to reduce the output size by merging
+    rectangle objects:
+
+        $ pdf-squasher.py -o output.pdf input.pdf
+
+    Same as above, but write intermediate output files to 'FOO'
+    directory, for debugging/troubleshooting:
+
+        $ pdf-squasher.py --outdir foo input.pdf
+
 
 
 Short Details
@@ -64,7 +103,7 @@ coordinates, `re` is rectangle, `f` is fill):
     1420.1 4812.8 159.598 101.898 re f
     1420.1 4914.6 159.598 101.898 re f
 
-The first rectangle overlaps the second (`4710.9+1-1.902 >= 4812.8`),
+The first rectangle overlaps the second (`4710.9 + 101.902 >= 4812.8`),
 and similarly the second overlaps the third. This tool will squash them into
 one:
 
