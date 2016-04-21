@@ -104,9 +104,21 @@ def decompress_pdf(infile,outfile):
     """
     cmd = [ 'mutool', 'clean', '-a', '-d', infile, outfile ]
     try:
-        check_call(cmd)
-    except CalledProcessError as e:
-        sys.exit("mutool failed, returned code %d" % (e.returncode))
+        rc = call(cmd)
+
+        #Hack Alert:
+        #On Debian 8 (jessy), mutools from version 1.5.2 terminates with
+        #exit code 1 even on success (compared to version 1.3 in Ubuntu 14.04)
+        #so can't rely on exit code.
+        #instead, just check if the output file exists and not empty.
+
+        #TODO: investigate and fix this mess.
+        if not os.path.isfile(outfile):
+            sys.exit("mutool failed on '%s', out file '%s' was not created" % \
+                     (infile,outfile))
+        if os.path.getsize(outfile)==0:
+            sys.exit("mutool failed on '%s' out file '%s' is empty" % \
+                     (infile,outfile))
     except OSError as e:
         sys.exit("failed to execute 'mutool': '%s' (is mupdf package " \
                  "installed?)" % (str(e)))
