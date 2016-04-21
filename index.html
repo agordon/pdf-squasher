@@ -103,6 +103,14 @@
           Online PDF-Squasher runs on a weak server and can only handle PDF
           of limited size. Run PDF-Squasher locally for faster results.
          </li>
+         <li>
+         For best results, Generate PDF directly in R (using the `pdf` output device).
+         If using Postscript output (`.ps` files), convert to PDF using the
+         `ps2pdf` command line program. *DO NOT* use Mac-OS-X built-in
+         preview program or its 'Export to PDF' method - as the exported PDF
+         will contain many superfluous drawing commands which will prevent
+         squashing.
+         </li>
         </p>
 
 			</div>
